@@ -1,44 +1,26 @@
-📊 A/B Testing Simulation for Internee.pk Homepage
+🚀 A/B Testing Simulation for Internee.pk Homepage
+📊 Data Science Project | UX Optimization | Statistical Experimentation
+🎯 Project Objective
 
+This project simulates an A/B test to evaluate how homepage design changes can improve user engagement on Internee.pk.
 
+Since real Google Analytics access was not available, I:
 
+Extracted homepage structural features via web scraping
 
+Designed two UX variations (A & B)
 
-🚀 Project Overview
-
-This project simulates an A/B Test for improving the homepage user experience of Internee.pk.
-
-Since real analytics access was unavailable, I:
-
-Scraped homepage structural features
-
-Engineered UX-based metrics
-
-Simulated user engagement
+Simulated user engagement behavior
 
 Performed statistical hypothesis testing
 
-Built an interactive experimentation dashboard
-
-Goal: Identify which homepage design drives higher engagement.
-
-🎯 Objective
-
-Design and analyze A/B tests to improve:
-
-User Engagement
-
-Bounce Rate (simulated proxy)
-
-Conversion Probability (modeled)
+Built interactive visualizations
 
 🌐 Data Source
 
-Homepage structural data extracted from:
+Public homepage HTML data from Internee.pk.
 
-Internee.pk (public website HTML)
-
-Extracted Features:
+Extracted metrics:
 
 Number of links
 
@@ -48,59 +30,53 @@ Number of internship cards
 
 Page size (HTML length)
 
-🧠 A/B Design Variations
-<details> <summary><strong>🅰 Design A (Original Homepage)</strong></summary>
+These structural elements were used as engagement predictors.
 
-Minimal CTA buttons
+🧠 A/B Design Variations
+🅰 Design A — Original Layout
+
+Minimal call-to-action buttons
 
 Limited visible internships
 
-Lower interaction density
+Basic interaction density
 
-Represents current structural layout.
+🅱 Design B — Improved UX Version
 
-</details> <details> <summary><strong>🅱 Design B (Improved UX Version)</strong></summary>
-
-More call-to-action buttons
+Increased CTA buttons
 
 Featured internship cards
 
-Increased navigation options
+Enhanced navigation structure
 
 Optimized engagement flow
 
-Hypothesis: Improves user engagement.
+Hypothesis: Design B increases engagement.
 
-</details>
-🧪 Hypothesis Testing
-Null Hypothesis (H0)
+🧪 Statistical Framework
 
-There is no significant difference in engagement between Design A and B.
+Null Hypothesis (H0):
+No significant difference in engagement between Design A and Design B.
 
-Alternative Hypothesis (H1)
+Alternative Hypothesis (H1):
+Design B results in higher engagement.
 
-Design B results in higher user engagement.
-
-Statistical Method Used:
+Method Used:
 
 Independent Two-Sample T-Test
 
-📊 What Makes This Project Interactive?
+Significance Level:
 
-✔ Engagement simulation using probabilistic modeling
-✔ Dynamic homepage feature adjustments
-✔ Real-time histogram visualization
+α = 0.05
+
+📊 Interactive Features
+
+✔ Engagement score simulation
 ✔ Adjustable UX variables (buttons, links, cards)
+✔ Real-time histogram comparison
+✔ Statistical significance output
 
-You can modify:
-
-Number of buttons
-
-Number of links
-
-Number of internship cards
-
-And instantly see engagement impact 📈
+Users can dynamically modify homepage elements and observe engagement changes instantly.
 
 🛠 Tech Stack
 
@@ -120,52 +96,59 @@ Requests
 
 ipywidgets
 
-🗂 Project Structure
+📂 Project Structure
+
 A-B-Testing-InterneePK/
 │
 ├── A-B-Testing-InterneePK.ipynb
 ├── ab_testing_simulation.py
 ├── README.md
 └── data/
-▶️ How to Run the Project
-Option 1 — Jupyter Notebook (Recommended)
 
-Open A-B-Testing-InterneePK.ipynb
+▶️ How to Run
+Option 1 — Notebook (Recommended)
 
-Run cells sequentially
+Open the notebook in Jupyter or Google Colab
 
-Use interactive sliders to explore engagement changes
+Run all cells sequentially
+
+Use interactive sliders to explore engagement impact
 
 Option 2 — Python Script
+
+Install dependencies:
+
 pip install -r requirements.txt
+
+Run:
+
 python ab_testing_simulation.py
-📈 Sample Output
 
-Engagement Distribution Comparison (A vs B)
+📈 Results
 
-Statistical Significance (p-value)
+Design B shows higher simulated engagement scores
 
-Interactive Engagement Simulation Dashboard
+Statistical testing confirms significance (p < 0.05)
 
-If p-value < 0.05 → Design B significantly improves UX.
+Improved UX structure leads to better modeled performance
 
 📌 Key Learnings
 
-How A/B testing works in real-world product teams
+Practical implementation of A/B testing methodology
 
-Statistical validation of UX decisions
+UX experimentation using structural web features
+
+Statistical validation of product decisions
 
 Engagement modeling without direct analytics access
 
-Practical application of hypothesis testing
-
-💡 Future Improvements
+🔮 Future Improvements
 
 Real Google Analytics integration
 
-Real user clickstream dataset
+Conversion probability modeling
 
-Logistic regression conversion modeling
+Logistic regression instead of linear simulation
 
 Deployment as a Streamlit web app
 
