@@ -1,56 +1,175 @@
-# A/B Testing Simulation for Internee.pk Homepage
+📊 A/B Testing Simulation for Internee.pk Homepage
 
-## Objective
-The goal of this project is to **design and analyze A/B tests** for better user experience on the Internee.pk homepage. Since we cannot access real user analytics, we simulate A/B testing using **scraped homepage data** and **modeled user engagement metrics**.
 
----
 
-## Data Source
-- Scraped from [Internee.pk](https://www.internee.pk) homepage.
-- Metrics extracted:
-  - Number of links
-  - Number of buttons
-  - Number of internship cards
-  - Page size (HTML length)
----
 
-## Tools & Libraries
-- Python 3
-- `numpy`, `pandas`, `matplotlib`
-- `scipy` for statistical testing
-- `beautifulsoup4` and `requests` for web scraping
-- `ipywidgets` for interactive dashboard
 
----
+🚀 Project Overview
 
-## Project Steps
+This project simulates an A/B Test for improving the homepage user experience of Internee.pk.
 
-1. **Web Scraping**: Extract homepage features.
-2. **Feature Engineering**: Count buttons, links, cards, and page size.
-3. **Design Variations**:
-   - Design A: Original homepage
-   - Design B: Improved homepage with more CTAs, links, and cards
-4. **Simulate User Engagement**: Engagement scores generated using a linear model with noise.
-5. **Statistical Testing**: Independent t-test to identify if Design B is significantly better.
-6. **Visualization**: Histograms of engagement scores.
-7. **Interactive Dashboard**: Adjust buttons, links, and cards to see engagement changes.
+Since real analytics access was unavailable, I:
 
----
+Scraped homepage structural features
 
-## How to Run
+Engineered UX-based metrics
 
-1. Open `A-B-Testing-InterneePK.ipynb` in **Google Colab** or **Jupyter Notebook**.
-2. Run all cells sequentially.
-3. Use the interactive sliders to explore how homepage changes affect engagement.
+Simulated user engagement
 
-Optional: Run `ab_testing_simulation.py` as a script (plots will appear in a separate window).
+Performed statistical hypothesis testing
 
----
+Built an interactive experimentation dashboard
 
-## Results
-- Design B shows **higher simulated engagement scores** compared to Design A.
-- Statistical test confirms **significant improvement** (p-value < 0.05).
-- Interactive dashboard allows exploration of different design feature combinations.
+Goal: Identify which homepage design drives higher engagement.
 
----
+🎯 Objective
 
+Design and analyze A/B tests to improve:
+
+User Engagement
+
+Bounce Rate (simulated proxy)
+
+Conversion Probability (modeled)
+
+🌐 Data Source
+
+Homepage structural data extracted from:
+
+Internee.pk (public website HTML)
+
+Extracted Features:
+
+Number of links
+
+Number of buttons
+
+Number of internship cards
+
+Page size (HTML length)
+
+🧠 A/B Design Variations
+<details> <summary><strong>🅰 Design A (Original Homepage)</strong></summary>
+
+Minimal CTA buttons
+
+Limited visible internships
+
+Lower interaction density
+
+Represents current structural layout.
+
+</details> <details> <summary><strong>🅱 Design B (Improved UX Version)</strong></summary>
+
+More call-to-action buttons
+
+Featured internship cards
+
+Increased navigation options
+
+Optimized engagement flow
+
+Hypothesis: Improves user engagement.
+
+</details>
+🧪 Hypothesis Testing
+Null Hypothesis (H0)
+
+There is no significant difference in engagement between Design A and B.
+
+Alternative Hypothesis (H1)
+
+Design B results in higher user engagement.
+
+Statistical Method Used:
+
+Independent Two-Sample T-Test
+
+📊 What Makes This Project Interactive?
+
+✔ Engagement simulation using probabilistic modeling
+✔ Dynamic homepage feature adjustments
+✔ Real-time histogram visualization
+✔ Adjustable UX variables (buttons, links, cards)
+
+You can modify:
+
+Number of buttons
+
+Number of links
+
+Number of internship cards
+
+And instantly see engagement impact 📈
+
+🛠 Tech Stack
+
+Python
+
+NumPy
+
+Pandas
+
+SciPy
+
+Matplotlib
+
+BeautifulSoup
+
+Requests
+
+ipywidgets
+
+🗂 Project Structure
+A-B-Testing-InterneePK/
+│
+├── A-B-Testing-InterneePK.ipynb
+├── ab_testing_simulation.py
+├── README.md
+└── data/
+▶️ How to Run the Project
+Option 1 — Jupyter Notebook (Recommended)
+
+Open A-B-Testing-InterneePK.ipynb
+
+Run cells sequentially
+
+Use interactive sliders to explore engagement changes
+
+Option 2 — Python Script
+pip install -r requirements.txt
+python ab_testing_simulation.py
+📈 Sample Output
+
+Engagement Distribution Comparison (A vs B)
+
+Statistical Significance (p-value)
+
+Interactive Engagement Simulation Dashboard
+
+If p-value < 0.05 → Design B significantly improves UX.
+
+📌 Key Learnings
+
+How A/B testing works in real-world product teams
+
+Statistical validation of UX decisions
+
+Engagement modeling without direct analytics access
+
+Practical application of hypothesis testing
+
+💡 Future Improvements
+
+Real Google Analytics integration
+
+Real user clickstream dataset
+
+Logistic regression conversion modeling
+
+Deployment as a Streamlit web app
+
+👨‍💻 Author
+
+Sobaan
+Data Science Project
